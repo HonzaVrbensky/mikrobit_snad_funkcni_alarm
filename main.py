@@ -18,8 +18,8 @@ def received(name, value):
             if learned_serial not in data_list:
                 data_list.append(learned_serial)
 
-    for serialek in data_list:
-        if remote_serial == serialek:
+    for another_serial in data_list:
+        if remote_serial == another_serial:
             if name == "alarm" and value == 1:
                 music.play_tone(Note.C, 0)
             elif name == "alarm" and value == 0:
