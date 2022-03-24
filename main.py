@@ -5,7 +5,7 @@ radio.on_received_value(received)
 my_serial = control.device_serial_number()
 
 learning = 0
-data_list = [my_serial]
+list = [my_serial]
 
 
 def received(name, value):
@@ -18,7 +18,7 @@ def received(name, value):
             if learned_serial not in data_list:
                 data_list.append(learned_serial)
 
-    for another_serial in data_list:
+    for another_serial in list:
         if remote_serial == another_serial:
             if name == "alarm" and value == 1:
                 music.play_tone(Note.C, 0)
