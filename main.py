@@ -15,8 +15,8 @@ def received(name, value):
     if learning == 1:
         if name == "learn" and value == 1:
             learned_serial = radio.received_packet(RadioPacketProperty.SERIAL_NUMBER)
-            if learned_serial not in data_list:
-                data_list.append(learned_serial)
+            if learned_serial not in list:
+                list.append(learned_serial)
 
     for another_serial in list:
         if remote_serial == another_serial:
